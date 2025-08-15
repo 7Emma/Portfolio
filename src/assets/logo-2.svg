@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 200">
+    <!-- Fond noir -->
+    <rect width="500" height="200" fill="#000" rx="10" ry="10" />
+    
+    <!-- Effet de lueur néon -->
+    <filter id="neonGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feFlood flood-color="#4ade80" flood-opacity="0.7" result="color" />
+      <feComposite in="color" in2="blur" operator="in" result="glow" />
+      <feMerge>
+        <feMergeNode in="glow" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+    
+    <!-- Logo texte avec effet néon -->
+    <g filter="url(#neonGlow)">
+      <!-- M en vert néon vif -->
+      <text x="60" y="120" font-family="Arial, sans-serif" font-size="65" font-weight="bold" fill="#4ade80">M</text>
+      
+      <!-- <> en vert néon avec plus d'espace -->
+      <text x="118" y="120" font-family="Arial, sans-serif" font-size="65" font-weight="bold" fill="#4ade80">&lt;&gt;</text>
+      
+      <!-- nu en vert néon avec espace après le chevron -->
+      <text x="195" y="120" font-family="Arial, sans-serif" font-size="65" font-weight="bold" fill="#4ade80">nu</text>
+      
+      <!-- Tech en vert clair -->
+      <text x="280" y="120" font-family="Arial, sans-serif" font-size="65" font-weight="bold" fill="#bbf7d0">Tech</text>
+    </g>
+    
+    <!-- Ligne horizontale en vert néon sous le texte -->
+    <line x1="60" y1="145" x2="440" y2="145" stroke="#4ade80" stroke-width="2" stroke-opacity="0.7" filter="url(#neonGlow)" />
+</svg>
