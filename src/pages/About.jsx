@@ -34,32 +34,6 @@ const theme = {
   darkText: "text-gray-200",
 };
 
-const services = [
-  {
-    icon: <Monitor size={24} />,
-    title: "Développement d'applications web",
-    description:
-      "Sites vitrines, applications SaaS, plateformes e-commerce avec des interfaces utilisateur modernes et réactives.",
-  },
-  {
-    icon: <Smartphone size={24} />,
-    title: "Développement mobile",
-    description:
-      "Applications iOS et Android natives ou cross-platform offrant une expérience utilisateur optimale.",
-  },
-  {
-    icon: <Cpu size={24} />,
-    title: "Conseil technique",
-    description:
-      "Architecture logicielle, choix technologiques, revue de code et stratégie de développement.",
-  },
-  {
-    icon: <Settings size={24} />,
-    title: "Optimisation de performance",
-    description:
-      "Audit, refactoring et amélioration des performances des applications existantes.",
-  },
-];
 
 const philosophyPillars = [
   {
@@ -126,9 +100,6 @@ const educationItems = [
   },
 ];
 
-// ============================================================================
-// Composant principal "About" avec le nouveau design
-// ============================================================================
 function About() {
   const [activeTab, setActiveTab] = useState("philosophy");
   const [isVisible, setIsVisible] = useState({});
@@ -161,7 +132,6 @@ function About() {
           {[
             { id: "philosophy", label: "Philosophie" },
             { id: "resume", label: "CV & Parcours" },
-            { id: "services", label: "Services" },
           ].map((tab) => (
             <button
               key={tab.id}
@@ -336,55 +306,6 @@ function About() {
     </div>
   );
 
-  // Composant pour la section "Services"
-  const ServicesSection = () => (
-    <div
-      id="services"
-      className={`animate-on-scroll transform transition-all duration-700 ${
-        activeTab === "services"
-          ? "opacity-100 translate-y-0"
-          : "hidden opacity-0 translate-y-4"
-      }`}
-    >
-      <h2 className="text-3xl font-bold mb-8 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-400">
-        Mes services
-      </h2>
-
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
-        {services.map((service, index) => (
-          <div
-            key={index}
-            className="group relative bg-slate-800/50 backdrop-blur-sm p-8 rounded-xl border border-slate-700 transform hover:scale-[1.02] transition-all duration-300 overflow-hidden hover:border-purple-400/50 hover:shadow-xl hover:shadow-purple-400/10"
-          >
-            <div className="flex flex-col items-center text-center">
-              <div className="mb-4 inline-flex p-4 rounded-full bg-slate-900 border-2 border-purple-400 shadow-lg shadow-purple-400/25 group-hover:animate-pulse transition-all duration-300">
-                <div className="text-purple-400 group-hover:scale-110 transition-transform duration-300">
-                  {service.icon}
-                </div>
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-2">
-                {service.title}
-              </h3>
-              <p className="text-gray-400">{service.description}</p>
-            </div>
-          </div>
-        ))}
-      </div>
-
-      <div className="mt-12 text-center">
-        <h3 className="text-xl font-semibold text-white mb-4">
-          Approche personnalisée
-        </h3>
-        <p className="text-gray-300 max-w-2xl mx-auto">
-          Chaque projet est unique et mérite une approche sur mesure. Après une
-          analyse approfondie de vos besoins, je vous propose les solutions les
-          plus adaptées pour atteindre vos objectifs tout en respectant vos
-          contraintes de temps et de budget.
-        </p>
-      </div>
-    </div>
-  );
-
   // Composant pour l'appel à l'action
   const CallToAction = () => (
     <div
@@ -465,7 +386,6 @@ function About() {
         <div className="max-w-5xl mx-auto py-12 px-6">
           <PhilosophySection />
           <ResumeSection />
-          <ServicesSection />
           <CallToAction />
         </div>
       </div>

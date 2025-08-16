@@ -15,7 +15,7 @@ const Home = () => {
   const [currentRole, setCurrentRole] = useState(0);
 
   const roles = [
-    "Développeur Full Stack",
+    "Full Stack Developer",
     "Data Engineer",
     "Designer UI/UX",
     "Créateur d'expériences",
@@ -36,7 +36,10 @@ const Home = () => {
   ];
 
   return (
-    <div id="home" className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
+    <div
+      id="home"
+      className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden"
+    >
       {/* Animated background elements */}
       <div className="absolute inset-0">
         <div className="absolute top-20 left-10 w-72 h-72 bg-purple-500/10 rounded-full mix-blend-multiply filter blur-xl animate-pulse"></div>
@@ -82,11 +85,16 @@ const Home = () => {
             Emmanuel AGBOTOEDO
           </h1>
 
-          {/* Animated role */}
-          <div className="h-12 mb-8">
-            <p className="text-xl md:text-2xl text-gray-300 transition-all duration-500">
-              {roles[currentRole]}
-            </p>
+           {/* Enhanced animated role with better transitions */}
+          <div className="h-16 mb-10 flex items-center justify-center">
+            <div className="relative overflow-hidden">
+              <p className="text-xl md:text-3xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-slate-300 to-slate-400 transition-all duration-700 transform hover:scale-105">
+                {roles[currentRole]}
+              </p>
+              
+              {/* Animated underline */}
+              <div className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-purple-500 to-cyan-500 transform origin-left transition-transform duration-700"></div>
+            </div>
           </div>
 
           {/* Description */}

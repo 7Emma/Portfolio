@@ -1,13 +1,4 @@
-import {
-  Code,
-  Monitor,
-  Database,
-  Cpu,
-  Award,
-  Zap,
-  Layers,
-  Settings,
-} from "lucide-react";
+import { Code, Monitor, Database, Cpu, Star } from "lucide-react";
 import { useState } from "react";
 
 const skills = {
@@ -102,6 +93,9 @@ const ExpertiseSection = () => {
       <div className="max-w-6xl mx-auto">
         {/* En-tête de la section */}
         <div className="text-center mb-16">
+          <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 text-white mb-6 animate-bounce shadow-lg shadow-purple-500/25">
+            <Star size={24} />
+          </div>
           <h2 className="text-4xl md:text-5xl font-extrabold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400">
             Expertise technique
           </h2>

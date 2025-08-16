@@ -10,7 +10,6 @@ import {
 } from "lucide-react";
 import sites from "../data/projectsData";
 
-
 const Projects = () => {
   // État pour gérer le filtre de projets
   const [filter, setFilter] = useState("all");
@@ -68,46 +67,62 @@ const Projects = () => {
   return (
     <section
       id="projects"
-      className="py-20 bg-slate-900 text-white min-h-screen"
+      className="py-24 bg-slate-900 text-white min-h-screen relative overflow-hidden"
     >
-      <div className="max-w-7xl mx-auto px-4">
+      {/* Éléments décoratifs de fond */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute -top-40 -right-40 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-pink-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-blue-500/5 rounded-full blur-3xl"></div>
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 relative z-10">
         {/* Header de la section */}
         <div
-          className={`mb-16 text-center transition-all duration-1000 ${
+          className={`mb-20 text-center transition-all duration-1000 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
         >
-          <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent mb-6">
-            Mes Projets
-          </h2>
-          <div className="w-24 h-1 bg-purple-500 mx-auto mb-8"></div>
-          <p className="text-gray-400 max-w-2xl mx-auto mb-12">
+          <div className="inline-block relative mb-6">
+            <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 text-white mb-6 animate-bounce shadow-lg shadow-purple-500/25">
+            <Briefcase size={24} />
+          </div>
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent">
+              Mes Projets
+            </h2>
+          </div>
+
+          <div className="flex justify-center mb-8">
+            <div className="w-32 h-1 bg-gradient-to-r from-purple-500 via-pink-500 to-blue-500 rounded-full shadow-lg shadow-purple-500/50"></div>
+          </div>
+
+          <p className="text-gray-300 max-w-3xl mx-auto mb-16 text-lg leading-relaxed">
             Découvrez mon portfolio de projets qui démontre mes compétences en
             développement web et mobile, de la conception à la réalisation.
           </p>
 
           {/* Filtres de la section */}
-          <div className="flex flex-wrap justify-center gap-2 mb-8">
+          <div className="flex flex-wrap justify-center gap-3 mb-12">
             <button
               onClick={() => filterProjects("all")}
-              className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
+              className={`px-6 py-3 rounded-full text-sm font-semibold transition-all duration-300 transform hover:scale-105 ${
                 filter === "all"
-                  ? "bg-pink-500 text-gray-900"
-                  : "bg-gray-800 text-gray-400 hover:bg-gray-700"
+                  ? "bg-gradient-to-r from-pink-500 to-purple-500 text-white shadow-lg shadow-pink-500/50"
+                  : "bg-gray-800/50 backdrop-blur-sm text-gray-300 hover:bg-gray-700/50 border border-gray-700/50"
               }`}
             >
               Tous
             </button>
             <button
               onClick={() => filterProjects("featured")}
-              className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
+              className={`px-6 py-3 rounded-full text-sm font-semibold transition-all duration-300 transform hover:scale-105 ${
                 filter === "featured"
-                  ? "bg-pink-500 text-gray-900"
-                  : "bg-gray-800 text-gray-400 hover:bg-gray-700"
+                  ? "bg-gradient-to-r from-pink-500 to-purple-500 text-white shadow-lg shadow-pink-500/50"
+                  : "bg-gray-800/50 backdrop-blur-sm text-gray-300 hover:bg-gray-700/50 border border-gray-700/50"
               }`}
             >
-              <span className="flex items-center gap-1">
-                <Star size={14} />
+              <span className="flex items-center gap-2">
+                <Star size={16} />
                 Projets vedettes
               </span>
             </button>
@@ -115,10 +130,10 @@ const Projects = () => {
               <button
                 key={index}
                 onClick={() => filterProjects(tech)}
-                className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
+                className={`px-6 py-3 rounded-full text-sm font-semibold transition-all duration-300 transform hover:scale-105 ${
                   filter === tech
-                    ? "bg-pink-500 text-gray-900"
-                    : "bg-gray-800 text-gray-400 hover:bg-gray-700"
+                    ? "bg-gradient-to-r from-pink-500 to-purple-500 text-white shadow-lg shadow-pink-500/50"
+                    : "bg-gray-800/50 backdrop-blur-sm text-gray-300 hover:bg-gray-700/50 border border-gray-700/50"
                 }`}
               >
                 {tech}
@@ -128,26 +143,27 @@ const Projects = () => {
         </div>
 
         {/* Grille de projets */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {visibleProjects.map((project, index) => (
             <div
               key={index}
-              className={`bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-purple-400/20 transition-all duration-500 transform ${
+              className={`group bg-gray-800/40 backdrop-blur-sm rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl hover:shadow-purple-500/20 transition-all duration-700 transform border border-gray-700/50 ${
                 isVisible ? "opacity-100 scale-100" : "opacity-0 scale-95"
-              } hover:scale-105`}
+              } hover:scale-105 hover:-translate-y-2`}
               style={{ transitionDelay: `${150 * (index % 3)}ms` }}
             >
-              <div className="relative group">
+              <div className="relative overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-br from-purple-500/20 to-pink-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10"></div>
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-110"
+                  className="w-full h-64 object-cover transition-transform duration-700 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
-                  <div className="p-6 flex justify-between w-full">
+                <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-end z-20">
+                  <div className="p-6 flex justify-between w-full transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
                     <button
                       onClick={() => openProjectDetails(project)}
-                      className="text-white bg-pink-500 hover:bg-pink-600 px-4 py-2 rounded-lg font-medium text-sm transition-colors"
+                      className="text-white bg-gradient-to-r from-pink-500 to-purple-500 hover:from-pink-600 hover:to-purple-600 px-6 py-2 rounded-xl font-semibold text-sm transition-all duration-300 shadow-lg hover:shadow-pink-500/50 transform hover:scale-105"
                     >
                       Détails
                     </button>
@@ -156,7 +172,7 @@ const Projects = () => {
                         href={project.githubLink}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="bg-gray-700 p-2 rounded-full hover:bg-gray-600 transition-colors"
+                        className="bg-gray-800/80 backdrop-blur-sm p-3 rounded-xl hover:bg-gray-700/80 transition-all duration-300 border border-gray-600/50 hover:border-purple-500/50 transform hover:scale-110"
                       >
                         <Github size={18} className="text-white" />
                       </a>
@@ -165,7 +181,7 @@ const Projects = () => {
                           href={project.liveLink}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="bg-gray-700 p-2 rounded-full hover:bg-gray-600 transition-colors"
+                          className="bg-gray-800/80 backdrop-blur-sm p-3 rounded-xl hover:bg-gray-700/80 transition-all duration-300 border border-gray-600/50 hover:border-purple-500/50 transform hover:scale-110"
                         >
                           <ExternalLink size={18} className="text-white" />
                         </a>
@@ -174,24 +190,24 @@ const Projects = () => {
                   </div>
                 </div>
                 {project.featured && (
-                  <div className="absolute top-3 right-3 bg-pink-500 text-gray-900 text-xs font-bold px-2 py-1 rounded-full flex items-center">
+                  <div className="absolute top-4 right-4 bg-gradient-to-r from-pink-500 to-purple-500 text-white text-xs font-bold px-3 py-1 rounded-full flex items-center shadow-lg animate-pulse">
                     <Star size={12} className="mr-1" />
                     Vedette
                   </div>
                 )}
               </div>
-              <div className="p-6">
-                <h3 className="text-xl font-semibold mb-2 text-pink-400">
+              <div className="p-6 bg-gradient-to-br from-gray-800/60 to-gray-900/60 backdrop-blur-sm">
+                <h3 className="text-xl font-bold mb-3 text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-purple-400">
                   {project.title}
                 </h3>
-                <p className="text-gray-300 text-sm mb-4">
+                <p className="text-gray-300 text-sm mb-6 leading-relaxed">
                   {project.description}
                 </p>
-                <div className="flex flex-wrap gap-2 mb-4">
+                <div className="flex flex-wrap gap-2">
                   {project.technologies.map((tech, i) => (
                     <span
                       key={i}
-                      className="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded-full"
+                      className="text-xs bg-gray-700/50 backdrop-blur-sm text-gray-300 px-3 py-2 rounded-lg border border-gray-600/50 hover:border-purple-500/50 transition-colors duration-300"
                     >
                       {tech}
                     </span>
@@ -205,84 +221,87 @@ const Projects = () => {
         {/* Modal pour les détails du projet */}
         {selectedProject && (
           <div
-            className="fixed inset-0 bg-black/80 flex items-center justify-center z-50 p-4"
+            className="fixed inset-0 bg-black/80 backdrop-blur-sm flex items-center justify-center z-50 p-4"
             onClick={closeProjectDetails}
           >
             <div
-              className="bg-gray-800 rounded-xl max-w-4xl w-full max-h-[90vh] overflow-y-auto"
+              className="bg-gray-800/95 backdrop-blur-xl rounded-2xl max-w-5xl w-full max-h-[80vh] overflow-y-auto border border-gray-700/50 shadow-2xl"
               onClick={(e) => e.stopPropagation()}
             >
               <div className="relative">
+                <div className="absolute inset-0 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-t-2xl"></div>
                 <img
                   src={selectedProject.image}
                   alt={selectedProject.title}
-                  className="w-full h-64 object-cover"
+                  className="w-full h-72 object-cover rounded-t-2xl"
                 />
                 <button
                   onClick={closeProjectDetails}
-                  className="absolute top-4 right-4 bg-gray-900/50 hover:bg-gray-900 p-2 rounded-full transition-colors"
+                  className="absolute top-6 right-6 bg-gray-900/80 backdrop-blur-sm hover:bg-gray-900 p-3 rounded-full transition-all duration-300 border border-gray-700/50 hover:border-purple-500/50 transform hover:scale-110"
                 >
                   <X className="text-white" size={24} />
                 </button>
                 {selectedProject.featured && (
-                  <div className="absolute top-4 left-4 bg-pink-500 text-gray-900 px-3 py-1 rounded-full text-sm font-bold flex items-center">
-                    <Star size={16} className="mr-1" />
+                  <div className="absolute top-6 left-6 bg-gradient-to-r from-pink-500 to-purple-500 text-white px-4 py-2 rounded-full text-sm font-bold flex items-center shadow-lg">
+                    <Star size={16} className="mr-2" />
                     Projet vedette
                   </div>
                 )}
               </div>
 
-              <div className="p-8">
-                <h2 className="text-2xl md:text-3xl font-bold text-pink-400 mb-4">
+              <div className="p-8 lg:p-12">
+                <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent mb-6">
                   {selectedProject.title}
                 </h2>
 
-                <p className="text-gray-300 mb-8">
+                <p className="text-gray-300 mb-6 text-lg leading-relaxed">
                   {selectedProject.description}
                 </p>
 
-                <div className="grid md:grid-cols-2 gap-8 mb-8">
+                <div className="grid md:grid-cols-2 gap-12 mb-6">
                   <div>
-                    <h3 className="text-xl font-semibold mb-4 text-white">
+                    <h3 className="text-2xl font-bold mb-6 text-white">
                       Détails du projet
                     </h3>
 
-                    <div className="space-y-4">
-                      <div className="flex items-start gap-3">
-                        <div className="bg-gray-700 p-2 rounded-full">
-                          <Tag size={18} className="text-pink-400" />
+                    <div className="space-y-6">
+                      <div className="flex items-start gap-4">
+                        <div className="bg-gradient-to-r from-purple-500 to-pink-500 p-3 rounded-xl">
+                          <Tag size={20} className="text-white" />
                         </div>
                         <div>
-                          <h4 className="text-sm font-medium text-gray-400">
+                          <h4 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-1">
                             Technologies
                           </h4>
-                          <p className="text-white">
+                          <p className="text-white font-medium">
                             {selectedProject.technologies.join(", ")}
                           </p>
                         </div>
                       </div>
 
-                      <div className="flex items-start gap-3">
-                        <div className="bg-gray-700 p-2 rounded-full">
-                          <Briefcase size={18} className="text-pink-400" />
+                      <div className="flex items-start gap-4">
+                        <div className="bg-gradient-to-r from-purple-500 to-pink-500 p-3 rounded-xl">
+                          <Briefcase size={20} className="text-white" />
                         </div>
                         <div>
-                          <h4 className="text-sm font-medium text-gray-400">
+                          <h4 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-1">
                             Mon rôle
                           </h4>
-                          <p className="text-white">{selectedProject.role}</p>
+                          <p className="text-white font-medium">
+                            {selectedProject.role}
+                          </p>
                         </div>
                       </div>
 
-                      <div className="flex items-start gap-3">
-                        <div className="bg-gray-700 p-2 rounded-full">
-                          <Award size={18} className="text-pink-400" />
+                      <div className="flex items-start gap-4">
+                        <div className="bg-gradient-to-r from-purple-500 to-pink-500 p-3 rounded-xl">
+                          <Award size={20} className="text-white" />
                         </div>
                         <div>
-                          <h4 className="text-sm font-medium text-gray-400">
+                          <h4 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-1">
                             Défis
                           </h4>
-                          <p className="text-white">
+                          <p className="text-white font-medium">
                             {selectedProject.challenges}
                           </p>
                         </div>
@@ -291,29 +310,34 @@ const Projects = () => {
                   </div>
 
                   <div>
-                    <h3 className="text-xl font-semibold mb-4 text-white">
+                    <h3 className="text-2xl font-bold mb-6 text-white">
                       Fonctionnalités clés
                     </h3>
-                    <ul className="list-disc pl-5 space-y-2 text-gray-300">
-                      <li>Interface utilisateur responsive et intuitive</li>
-                      <li>Performance optimisée pour une expérience fluide</li>
-                      <li>Architecture robuste et évolutive</li>
-                      <li>Tests automatisés pour garantir la qualité</li>
-                      <li>
-                        Documentation détaillée pour faciliter la maintenance
-                      </li>
-                    </ul>
+                    <div className="space-y-4">
+                      {[
+                        "Interface utilisateur responsive et intuitive",
+                        "Performance optimisée pour une expérience fluide",
+                        "Architecture robuste et évolutive",
+                        "Tests automatisés pour garantir la qualité",
+                        "Documentation détaillée pour faciliter la maintenance",
+                      ].map((feature, index) => (
+                        <div key={index} className="flex items-center gap-3">
+                          <div className="w-2 h-2 bg-gradient-to-r from-pink-500 to-purple-500 rounded-full"></div>
+                          <span className="text-gray-300">{feature}</span>
+                        </div>
+                      ))}
+                    </div>
                   </div>
                 </div>
 
-                <div className="flex justify-center space-x-4 pt-4 border-t border-gray-700">
+                <div className="flex justify-center space-x-8 pt-6 border-t border-gray-700/50">
                   <a
                     href={selectedProject.githubLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-gray-700 hover:bg-gray-600 text-white px-6 py-3 rounded-lg transition-colors flex items-center gap-2"
+                    className="bg-gray-700/50 backdrop-blur-sm hover:bg-gray-600/50 text-white px-8 py-4 rounded-xl transition-all duration-300 flex items-center gap-3 border border-gray-600/50 hover:border-purple-500/50 transform hover:scale-105 font-semibold"
                   >
-                    <Github size={18} />
+                    <Github size={20} />
                     Voir le code
                   </a>
                   {selectedProject.liveLink !== "#" && (
@@ -321,9 +345,9 @@ const Projects = () => {
                       href={selectedProject.liveLink}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="bg-pink-500 hover:bg-pink-600 text-gray-900 px-6 py-3 rounded-lg transition-colors flex items-center gap-2"
+                      className="bg-gradient-to-r from-pink-500 to-purple-500 hover:from-pink-600 hover:to-purple-600 text-white px-8 py-2 rounded-xl transition-all duration-300 flex items-center gap-3 shadow-lg hover:shadow-pink-500/50 transform hover:scale-105 font-semibold"
                     >
-                      <ExternalLink size={18} />
+                      <ExternalLink size={20} />
                       Voir en ligne
                     </a>
                   )}

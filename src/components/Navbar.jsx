@@ -65,20 +65,41 @@ function Navbar() {
             className="group relative inline-block px-2 py-2 items-center space-x-2 transition-transform duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-purple-400 rounded"
             aria-label="Accueil"
           >
-            {/* Texte du logo */}
-            <p className="relative z-10 text-pink-400 font-bold text-lg md:text-xl">
-              ManuTech
-            </p>
+            {/* Logo amélioré */}
+            <a
+              href="#home"
+              onClick={(e) => {
+                e.preventDefault();
+                handleNavClick("#home");
+              }}
+              className="group relative flex items-center space-x-3 px-3 py-2 transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-purple-400 rounded-xl"
+              aria-label="ManuTech - Accueil"
+            >
+              {/* Logo avec animation */}
+              <div className="relative">
+                <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center text-white font-bold text-lg shadow-lg group-hover:shadow-purple-500/50 transition-all duration-300">
+                  M
+                </div>
+                <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-purple-400 to-pink-400 opacity-0 group-hover:opacity-30 blur-md transition-all duration-300"></div>
+              </div>
 
-            {/* Effet blur / gradient derrière le texte */}
+              <div className="hidden sm:block">
+                <p className="text-xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+                  ManuTech
+                </p>
+                <p className="text-xs text-gray-400 -mt-1">Web Developer</p>
+              </div>
+            </a>
+
+            {/* Effet blur / gradient derrière le texte *
             <span className="absolute inset-0 animate-gradient-slow rounded-full bg-gradient-to-r from-purple-400/20 to-pink-400/20 blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
 
-            {/* Légère animation de mouvement du gradient */}
-            <span className="absolute inset-0 rounded-full bg-gradient-to-r from-purple-500 via-pink-500 to-purple-400 opacity-20 animate-gradient-slow pointer-events-none"></span>
+            {/* Légère animation de mouvement du gradient 
+            <span className="absolute inset-0 rounded-full bg-gradient-to-r from-purple-500 via-pink-500 to-purple-400 opacity-20 animate-gradient-slow pointer-events-none"></span>*/}
           </a>
 
           {/* Menu desktop */}
-          <div className="hidden md:flex items-center space-x-1">
+          <div className="hidden md:flex items-center">
             {navItems.map((item) => (
               <a
                 key={item.href}

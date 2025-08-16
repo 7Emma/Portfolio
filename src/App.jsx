@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import ServicesSection from "./pages/Service";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
@@ -11,12 +12,12 @@ import ExpertiseSection from "./pages/ExpertiseSection";
 
 function App() {
   //const [isLoading, setIsLoading] = useState(true);
-//
+  //
   //useEffect(() => {
   //  const timer = setTimeout(() => setIsLoading(false), 3000);
   //  return () => clearTimeout(timer);
   //}, []);
-//
+  //
   //if (isLoading) return <LoadingSpinner />;
 
   return (
@@ -25,8 +26,9 @@ function App() {
       <main className="flex-grow">
         <Home />
         <About />
-        <ProcessSection />
         <ExpertiseSection />
+        <ServicesSection />
+        <ProcessSection />
         <Projects />
         <Contact />
       </main>
