@@ -34,7 +34,6 @@ const theme = {
   darkText: "text-gray-200",
 };
 
-
 const philosophyPillars = [
   {
     icon: <Award size={24} />,
@@ -322,17 +321,24 @@ function About() {
           vision en réalité.
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <button className="group relative inline-flex items-center px-8 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-medium rounded-lg overflow-hidden transition-all duration-300 hover:scale-105 shadow-lg shadow-purple-500/25 text-lg">
+          <a
+            href="#contact"
+            className="group relative inline-flex items-center px-8 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-medium rounded-lg overflow-hidden transition-all duration-300 hover:scale-105 shadow-lg shadow-purple-500/25 text-lg"
+          >
             <span className="relative z-10 flex items-center">
               <Send size={20} className="mr-2" />
               Me contacter
             </span>
             <div className="absolute inset-0 bg-gradient-to-r from-purple-700 to-pink-700 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></div>
-          </button>
-          <button className="inline-flex items-center px-8 py-3 bg-transparent border-2 border-purple-400 text-purple-400 font-medium rounded-lg hover:bg-purple-400/10 transition-all duration-300 text-lg">
+          </a>
+          <a
+            href="/src/assets/files/MonCv.pdf"
+            download="CV-Emmanuel.pdf"
+            className="inline-flex items-center px-8 py-3 bg-transparent border-2 border-purple-400 text-purple-400 font-medium rounded-lg hover:bg-purple-500 hover:text-white transition-all duration-300 text-lg shadow-md hover:shadow-purple-400/50"
+          >
             <FileDown size={20} className="mr-2" />
             Télécharger mon CV
-          </button>
+          </a>
         </div>
       </div>
     </div>

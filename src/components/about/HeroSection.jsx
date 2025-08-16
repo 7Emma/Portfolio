@@ -3,7 +3,7 @@ import photo from "../../assets/photo.png";
 
 const HeroSection = () => {
   const profileImageUrl = photo;
-  const cvDownloadUrl = "#";
+  const cvDownloadUrl = "/src/assets/files/MonCv.pdf";
 
   return (
     <div className="relative overflow-hidden py-20 lg:py-32 bg-slate-900">
@@ -41,17 +41,31 @@ const HeroSection = () => {
           <h1 className="text-4xl md:text-6xl font-extrabold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400">
             À PROPOS
           </h1>
-          <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto lg:mx-0 mb-10">
-            Avec une 3 ans expérience dans la création d'applications web et
-            mobiles performantes et innovantes. Je transforme les idées
-            complexes en solutions techniques élégantes. Je suis passionné par
-            l'optimisation des performances et l'expérience utilisateur.
-            Toujours curieux, j'aime apprendre de nouvelles technologies pour
-            améliorer mes projets.
+          <p className="text-xl py-4 font-semibold bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
+            Développeur Web & Data Engineer
+          </p>
+          <p className="text-lg text-gray-300 max-w-3xl mx-auto lg:mx-0 mb-10">
+            Passionné par la création d’applications web et mobiles
+            performantes, innovantes et intuitives. Depuis plus de 3 ans, je
+            transforme des idées complexes en solutions techniques élégantes, en
+            combinant créativité, logique et performance.
+            <br />
+            <br /> J’aime relever des défis techniques, optimiser les
+            performances et concevoir des expériences utilisateur fluides et
+            mémorables. Toujours curieux et avide de nouvelles technologies, je
+            cherche constamment à enrichir mes compétences pour offrir des
+            projets modernes, efficaces et impactants.
+            <br />
+            <br /> Pour moi, chaque projet est une aventure :{" "}
+            <span className="font-semibold">
+              apporter des solutions concrètes, simplifier la complexité et
+              créer un produit qui fait la différence.
+            </span>
           </p>
           <div className="flex justify-center lg:justify-start">
             <a
               href={cvDownloadUrl}
+              download="CV-Emmanuel.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="group relative inline-flex items-center px-8 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-medium rounded-lg overflow-hidden transition-all duration-300 hover:scale-105 shadow-xl shadow-purple-500/25"

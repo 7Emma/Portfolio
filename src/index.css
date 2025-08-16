@@ -6,3 +6,18 @@ body {
   padding-top: 4rem; /* Décalage à cause du menu fixe */
   @apply m-0 p-0;
 }
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #1e293b;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, #8b5cf6, #a855f7);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(45deg, #7c3aed, #9333ea);
+  box-shadow: 0 0 10px rgba(139, 92, 246, 0.5);
+}

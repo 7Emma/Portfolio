@@ -81,27 +81,27 @@ const Home = () => {
           </div>
 
           {/* Name and title */}
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-4 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400">
+          <h1 className="text-4xl md:text-6xl font-bold text-purple-500 mb-4 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400">
             Emmanuel AGBOTOEDO
           </h1>
 
-           {/* Enhanced animated role with better transitions */}
-          <div className="h-16 mb-10 flex items-center justify-center">
-            <div className="relative overflow-hidden">
-              <p className="text-xl md:text-3xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-slate-300 to-slate-400 transition-all duration-700 transform hover:scale-105">
+          {/* Enhanced animated role with better transitions */}
+          <div className="h-16 mb-8 flex items-center justify-center">
+            <div className="relative">
+              <p className="text-xl md:text-3xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-pink-500 transition-all duration-700 transform hover:scale-105">
                 {roles[currentRole]}
               </p>
-              
+
               {/* Animated underline */}
               <div className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-purple-500 to-cyan-500 transform origin-left transition-transform duration-700"></div>
             </div>
           </div>
 
           {/* Description */}
-          <p className="text-lg text-gray-400 max-w-2xl mx-auto mb-12 leading-relaxed">
-            Passionné par la création d'expériences numériques exceptionnelles,
-            je transforme vos idées en solutions innovantes avec créativité et
-            expertise technique.
+          <p className="text-lg text-gray-100 max-w-2xl mx-auto mb-10 leading-relaxed">
+            Passionné par la conception d’expériences numériques remarquables,
+            je transforme vos idées en solutions innovantes, alliant créativité
+            et expertise technique.
           </p>
 
           {/* Skills icons */}
@@ -126,22 +126,40 @@ const Home = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <button className="group relative px-8 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25">
+            <a
+              href="#projects"
+              className="group relative px-8 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25"
+            >
               <span className="relative z-10">Voir mes projets</span>
               <div className="absolute inset-0 bg-gradient-to-r from-purple-700 to-pink-700 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></div>
-            </button>
+            </a>
 
-            <button className="px-8 py-3 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300 hover:scale-105">
+            <a
+              href="#contact"
+              className="px-8 py-3 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300 hover:scale-105"
+            >
               Me contacter
-            </button>
+            </a>
           </div>
 
           {/* Social links */}
           <div className="flex justify-center space-x-6 mb-12">
             {[
-              { icon: Github, href: "#", label: "GitHub" },
-              { icon: Linkedin, href: "#", label: "LinkedIn" },
-              { icon: Mail, href: "#", label: "Email" },
+              {
+                icon: Github,
+                href: "https://www.github.com/7Emma",
+                label: "GitHub",
+              },
+              {
+                icon: Linkedin,
+                href: "https://www.linkedin.com/in/emmanuel-mahoukp%C3%A9go-agbotoedo-50a6bb351/",
+                label: "LinkedIn",
+              },
+              {
+                icon: Mail,
+                href: "mailto:mahoukpegoemmanuel@gmail.com",
+                label: "Email",
+              },
             ].map((social, index) => (
               <a
                 key={social.label}

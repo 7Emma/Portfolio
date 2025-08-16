@@ -64,7 +64,7 @@ function Footer() {
       id: "github",
       label: "GitHub",
       icon: Github,
-      url: "https://github.com/emmaagbo",
+      url: "https://github.com/7Emma",
       color: "hover:text-gray-400",
     },
     {

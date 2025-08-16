@@ -171,7 +171,7 @@ const Contact = () => {
         <h2 className="text-4xl md:text-5xl font-extrabold text-center mb-4 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-400">
           Contactez-moi
         </h2>
-        <p className="text-center mb-12 text-gray-400 max-w-2xl mx-auto">
+        <p className="text-center text-lg mb-12 text-gray-300 max-w-2xl mx-auto">
           Pour toute question, opportunité de collaboration ou simplement pour
           dire bonjour, n'hésitez pas à me contacter. Je vous répondrai dans les
           plus brefs délais.

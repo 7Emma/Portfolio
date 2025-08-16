@@ -27,6 +27,30 @@ function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  //Pour determiner la section active
+  useEffect(() => {
+    const handleScrollActive = () => {
+      const sections = navItems.map((item) =>
+        document.querySelector(item.href)
+      );
+      const scrollPosition = window.scrollY + window.innerHeight / 2;
+
+      for (let section of sections) {
+        if (section) {
+          const top = section.offsetTop;
+          const bottom = top + section.offsetHeight;
+          if (scrollPosition >= top && scrollPosition < bottom) {
+            setActiveSection(section.id);
+            break;
+          }
+        }
+      }
+    };
+
+    window.addEventListener("scroll", handleScrollActive);
+    return () => window.removeEventListener("scroll", handleScrollActive);
+  }, []);
+
   // Navigation items avec icônes
   const navItems = [
     { href: "#home", label: "Accueil", icon: Home },
