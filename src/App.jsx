@@ -11,14 +11,14 @@ import ProcessSection from "./pages/Processus";
 import ExpertiseSection from "./pages/ExpertiseSection";
 
 function App() {
-  //const [isLoading, setIsLoading] = useState(true);
-  //
-  //useEffect(() => {
-  //  const timer = setTimeout(() => setIsLoading(false), 3000);
-  //  return () => clearTimeout(timer);
-  //}, []);
-  //
-  //if (isLoading) return <LoadingSpinner />;
+  const [isLoading, setIsLoading] = useState(true);
+  
+  useEffect(() => {
+    const timer = setTimeout(() => setIsLoading(false), 3000);
+    return () => clearTimeout(timer);
+  }, []);
+  
+  if (isLoading) return <LoadingSpinner />;
 
   return (
     <div className="flex flex-col min-h-screen bg-gradient from-slate-900 via-purple-900 to-slate-900 text-green-400">
