@@ -164,7 +164,7 @@ const ProcessSection = () => {
                     isLeft ? "pl-16 md:pl-0 md:pr-16" : "pl-16 md:pl-16 md:pr-0"
                   }`}
               >
-                <h3 className="text-xl font-bold text-white mb-2">
+                <h3 className="text-xl font-bold text-white mb-2 ">
                   <span className={`inline-block mr-2 text-${stepColor}`}>
                     {index + 1}.
                   </span>

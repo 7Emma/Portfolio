@@ -27,7 +27,7 @@ const sites = [
     description:
       "Site portfolio responsive pour présenter l’équipe OPPAI, leur savoir-faire et leur vision.",
     image: image2,
-    technologies: ["Vue.js", "Tailwind CSS", "Firebase"],
+    technologies: ["React", "Tailwind CSS", "Django REST"],
     role: "Développeur Frontend",
     challenges: "Animations fluides et optimisation des images.",
     githubLink: "https://github.com/7Emma/OPPAI",
@@ -39,7 +39,7 @@ const sites = [
     description:
       "Application de gestion de tâches avec collaboration en temps réel entre utilisateurs.",
     image: image3,
-    technologies: ["React", "Redux", "Express", "Socket.io"],
+    technologies: ["React", "Tailwind CSS", "Express", "MongoDB"],
     role: "Développeur Full Stack",
     challenges:
       "Synchronisation en temps réel et gestion des conflits d’édition.",
