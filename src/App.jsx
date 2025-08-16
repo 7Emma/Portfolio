@@ -9,6 +9,7 @@ import Contact from "./pages/Contact";
 import LoadingSpinner from "./components/LoadingSpinner";
 import ProcessSection from "./pages/Processus";
 import ExpertiseSection from "./pages/ExpertiseSection";
+import CustomCursor from "./components/Cursor";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -22,6 +23,7 @@ function App() {
 
   return (
     <div className="flex flex-col min-h-screen bg-gradient from-slate-900 via-purple-900 to-slate-900 text-green-400">
+      <CustomCursor />
       <Navbar />
       <main className="flex-grow">
         <Home />
