@@ -9,7 +9,6 @@ import {
   Code,
   Star,
   Settings,
-  MessageCircle,
 } from "lucide-react";
 
 function Navbar() {
@@ -60,7 +59,7 @@ function Navbar() {
     { href: "#services", label: "Services", icon: Settings },
     { href: "#process", label: "Processus", icon: Code },
     { href: "#projects", label: "Projets", icon: Briefcase },
-    { href: "#contact", label: "Contact", icon: MessageCircle },
+    { href: "#contact", label: "Contact", icon: Mail },
   ];
 
   const handleNavClick = (href) => {

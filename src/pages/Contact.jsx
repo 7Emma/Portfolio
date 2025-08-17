@@ -168,6 +168,9 @@ const Contact = () => {
       className="min-h-screen bg-slate-900 py-20 px-4 transition-all duration-300"
     >
       <div className="max-w-4xl mx-auto">
+        <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 text-white mb-6 animate-bounce shadow-lg shadow-purple-500/25">
+            <Mail size={24} />
+          </div>
         <h2 className="text-4xl md:text-5xl font-extrabold text-center mb-4 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-400">
           Contactez-moi
         </h2>
