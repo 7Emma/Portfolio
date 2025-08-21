@@ -1,38 +1,16 @@
 import { useState, useEffect } from "react";
 import HeroSection from "../components/about/HeroSection";
 import {
-  Code,
   Award,
   Layers,
-  Monitor,
-  Smartphone,
-  Cpu,
-  Database,
   Settings,
-  Globe,
-  Book,
-  Zap,
   Send,
-  Terminal,
   FileDown,
   Briefcase,
-  User,
   Calendar,
   GraduationCap,
   Building,
 } from "lucide-react";
-
-const theme = {
-  primary: "text-purple-400",
-  secondary: "text-pink-400",
-  accent: "text-blue-400",
-  primaryBg: "bg-purple-400",
-  secondaryBg: "bg-pink-400",
-  primaryBorder: "border-purple-400",
-  darkBg: "bg-slate-900",
-  darkBgAlt: "bg-slate-800",
-  darkText: "text-gray-200",
-};
 
 const philosophyPillars = [
   {
@@ -84,25 +62,45 @@ const experienceItems = [
 
 const educationItems = [
   {
-    degree: "Master en Développement Web",
-    institution: "École Supérieure du Numérique",
-    year: "2022",
+    degree: "Licence en Informatique de Gestion",
+    institution: "Institut Universitaire de Technologie",
+    year: "2023",
     description:
-      "Spécialisation en technologies web modernes et développement full-stack.",
+      "Formation polyvalente alliant informatique et gestion : programmation, bases de données, analyse des systèmes d’information et outils de comptabilité.",
   },
   {
-    degree: "Licence en Informatique",
-    institution: "Université Tech",
+    degree: "Développement Web Fullstack",
+    institution: "OpenClassrooms",
+    year: "2021",
+    description:
+      "Compétences en développement web moderne (React, Node.js, MongoDB, Django etc.), création d’applications complètes et optimisation des processus métiers.",
+  },
+  {
+    degree: "Baccalauréat Professionnel en Gestion Administrative",
+    institution: "Lycée Technique et Professionnel",
     year: "2020",
     description:
-      "Fondamentaux de la programmation, algorithmes et structures de données.",
+      "Acquisition de solides bases en gestion administrative, comptabilité et organisation des activités professionnelles.",
+  },
+  {
+    degree: "Certificat d’Aptitude Primaire en Gestion",
+    institution: "Lycée Technique et Professionnel",
+    year: "2019",
+    description:
+      "Introduction aux principes de comptabilité, gestion et commerce, ouvrant la voie à mon double parcours en gestion et informatique.",
+  },
+  {
+    degree: "Brevet d’Études du Premier Cycle (BEPC)",
+    institution: "Collège d’Enseignement Général",
+    year: "2017",
+    description:
+      "Diplôme de base validant le premier cycle secondaire, socle de mon parcours en gestion et technologies.",
   },
 ];
 
 function About() {
   const [activeTab, setActiveTab] = useState("philosophy");
   const [isVisible, setIsVisible] = useState({});
-
   // Hook pour animer les éléments au défilement
   useEffect(() => {
     const handleScroll = () => {

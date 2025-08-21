@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import ServicesSection from "./pages/Service";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";

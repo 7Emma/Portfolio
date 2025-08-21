@@ -6,7 +6,6 @@ import {
   Settings,
   ArrowRight,
   Check,
-  Star,
 } from "lucide-react";
 
 const services = [

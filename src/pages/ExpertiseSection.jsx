@@ -1,5 +1,4 @@
 import { Code, Monitor, Database, Cpu, Star } from "lucide-react";
-import { useState } from "react";
 
 const skills = {
   languages: {
@@ -56,7 +55,6 @@ const colorMap = {
 };
 
 const ExpertiseSection = () => {
-  const [hoveredSkill, setHoveredSkill] = useState(null);
 
   return (
     <section id="expertise" className="py-20 px-6 bg-slate-900 text-gray-200">
