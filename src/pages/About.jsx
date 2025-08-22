@@ -330,7 +330,7 @@ function About() {
             <div className="absolute inset-0 bg-gradient-to-r from-purple-700 to-pink-700 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></div>
           </a>
           <a
-            href="/src/assets/files/MonCv.pdf"
+            href="/MonCv.pdf"
             download="CV-Emmanuel.pdf"
             className="inline-flex items-center px-8 py-3 bg-transparent border-2 border-purple-400 text-purple-400 font-medium rounded-lg hover:bg-purple-500 hover:text-white transition-all duration-300 text-lg shadow-md hover:shadow-purple-400/50"
           >

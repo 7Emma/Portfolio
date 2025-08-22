@@ -3,7 +3,7 @@ import photo from "../../assets/photo.png";
 
 const HeroSection = () => {
   const profileImageUrl = photo;
-  const cvDownloadUrl = "/src/assets/files/MonCv.pdf";
+  const cvDownloadUrl = "/MonCv.pdf";
 
   return (
     <div className="relative overflow-hidden py-20 lg:py-32 bg-slate-900">
