@@ -38,61 +38,61 @@ const philosophyPillars = [
 
 const experienceItems = [
   {
-    title: "Développeur Frontend",
+    title: "Développeur Web",
     company: "AsiTech",
-    period: "2023 - Présent",
+    period: "2024 - Présent",
     description:
       "Développement d'interfaces utilisateur réactives avec React et optimisation des performances.",
   },
-  {
-    title: "Développeur Web Junior",
-    company: "WebSolutions",
-    period: "2022 - 2023",
-    description:
-      "Création de sites web responsives et intégration de systèmes de gestion de contenu.",
-  },
-  {
-    title: "Stage en développement",
-    company: "EcoDev",
-    period: "2021 - 2022",
-    description:
-      "Participation à des projets d'équipe et apprentissage des méthodologies agiles.",
-  },
+  //{
+  //  title: "Développeur Web Junior",
+  //  company: "WebSolutions",
+  //  period: "2024 - 2025",
+  //  description:
+  //    "Création de sites web responsives et intégration de systèmes de gestion de contenu.",
+  //},
+  //{
+  //  title: "Stage en développement",
+  //  company: "EcoDev",
+  //  period: "2023 - 2024",
+  //  description:
+  //    "Participation à des projets d'équipe et apprentissage des méthodologies agiles.",
+  //},
 ];
 
 const educationItems = [
   {
     degree: "Licence en Informatique de Gestion",
     institution: "Institut Universitaire de Technologie",
-    year: "2023",
+    year: "En cours",
     description:
       "Formation polyvalente alliant informatique et gestion : programmation, bases de données, analyse des systèmes d’information et outils de comptabilité.",
   },
   {
     degree: "Développement Web Fullstack",
     institution: "OpenClassrooms",
-    year: "2021",
+    year: "2024",
     description:
       "Compétences en développement web moderne (React, Node.js, MongoDB, Django etc.), création d’applications complètes et optimisation des processus métiers.",
   },
   {
     degree: "Baccalauréat Professionnel en Gestion Administrative",
     institution: "Lycée Technique et Professionnel",
-    year: "2020",
+    year: "2023",
     description:
       "Acquisition de solides bases en gestion administrative, comptabilité et organisation des activités professionnelles.",
   },
   {
     degree: "Certificat d’Aptitude Primaire en Gestion",
     institution: "Lycée Technique et Professionnel",
-    year: "2019",
+    year: "2021",
     description:
       "Introduction aux principes de comptabilité, gestion et commerce, ouvrant la voie à mon double parcours en gestion et informatique.",
   },
   {
     degree: "Brevet d’Études du Premier Cycle (BEPC)",
     institution: "Collège d’Enseignement Général",
-    year: "2017",
+    year: "2020",
     description:
       "Diplôme de base validant le premier cycle secondaire, socle de mon parcours en gestion et technologies.",
   },

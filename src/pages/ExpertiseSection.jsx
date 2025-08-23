@@ -5,7 +5,7 @@ const skills = {
     title: "Langages de programmation",
     icon: <Code size={22} />,
     color: "purple",
-    items: ["JavaScript/TypeScript", "Python", "C++", "Swift/Kotlin", "Java"],
+    items: ["JavaScript/TypeScript", "Python", "C++", "Java"],
   },
   frontend: {
     title: "Frontend",
@@ -14,9 +14,8 @@ const skills = {
     items: [
       "React.js",
       "React Native",
-      "Vue.js",
-      "Angular",
-      "HTML5/CSS3/SASS",
+      "Flutter",
+      "HTML5/CSS3",
       "TailwindCSS",
     ],
   },
@@ -30,7 +29,6 @@ const skills = {
       "Laravel",
       "API RESTful",
       "GraphQL",
-      "Microservices",
     ],
   },
   devops: {
@@ -39,11 +37,11 @@ const skills = {
     color: "purple",
     items: [
       "Git/GitHub/GitLab",
-      "Docker",
-      "Kubernetes",
-      "AWS/Azure/GCP",
+      //"Docker",
+      //"Kubernetes",
+      //"AWS/Azure/GCP",
       "CI/CD",
-      "Terraform",
+      //"Terraform",
     ],
   },
 };
