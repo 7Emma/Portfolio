@@ -14,7 +14,7 @@ const services = [
     title: "Développement d'applications web",
     description:
       "Sites vitrines, applications SaaS, plateformes e-commerce avec des interfaces utilisateur modernes et réactives.",
-    features: ["React/Next.js", "Vue.js/Nuxt", "TypeScript", "API REST"],
+    features: ["React/Next.js", "TypeScript", "API REST"],
     shadowColor: "blue",
     delay: 0,
   },
