@@ -44,20 +44,20 @@ const experienceItems = [
     description:
       "Développement d'interfaces utilisateur réactives avec React et optimisation des performances.",
   },
-  //{
-  //  title: "Développeur Web Junior",
-  //  company: "WebSolutions",
-  //  period: "2024 - 2025",
-  //  description:
-  //    "Création de sites web responsives et intégration de systèmes de gestion de contenu.",
-  //},
-  //{
-  //  title: "Stage en développement",
-  //  company: "EcoDev",
-  //  period: "2023 - 2024",
-  //  description:
-  //    "Participation à des projets d'équipe et apprentissage des méthodologies agiles.",
-  //},
+  {
+    title: "Développeur Web Junior",
+    company: "WebSolutions",
+    period: "2024 - 2025",
+    description:
+      "Création de sites web responsives et intégration de systèmes de gestion de contenu.",
+  },
+  {
+    title: "Stage en développement",
+    company: "EcoDev",
+    period: "2023 - 2024",
+    description:
+      "Participation à des projets d'équipe et apprentissage des méthodologies agiles.",
+  },
 ];
 
 const educationItems = [

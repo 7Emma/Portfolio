@@ -37,11 +37,11 @@ const skills = {
     color: "purple",
     items: [
       "Git/GitHub/GitLab",
-      //"Docker",
-      //"Kubernetes",
-      //"AWS/Azure/GCP",
+      "Docker",
+      "Kubernetes",
+      "AWS/Azure/GCP",
       "CI/CD",
-      //"Terraform",
+      "Terraform",
     ],
   },
 };

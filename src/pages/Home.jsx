@@ -81,8 +81,8 @@ const Home = () => {
           </div>
 
           {/* Name and title */}
-          <h1 className="text-4xl md:text-6xl font-bold text-purple-500 mb-4 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400">
-            Emmanuel AGBOTOEDO
+          <h1 className="text-2xl md:text-5xl font-bold text-purple-500 mb-4 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400">
+            Emmanuel AGBOTOEDO <br/> Mahoukpégo
           </h1>
 
           {/* Enhanced animated role with better transitions */}
