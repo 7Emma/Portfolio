@@ -1,9 +1,9 @@
 import { FileDown } from "lucide-react";
-import photo from "../../assets/photo.png";
+import photo from "../../assets/emmanuel-agbotoedo.png";
 
 const HeroSection = () => {
   const profileImageUrl = photo;
-  const cvDownloadUrl = "/MonCv.pdf";
+  const cvDownloadUrl = "//Cv-Emmanuel-AGBOTOEDO.pdf";
 
   return (
     <div className="relative overflow-hidden py-20 lg:py-32 bg-slate-900">
@@ -65,7 +65,7 @@ const HeroSection = () => {
           <div className="flex justify-center lg:justify-start">
             <a
               href={cvDownloadUrl}
-              download="CV-Emmanuel.pdf"
+              download="CV-Emmanuel-AGBOTOEDO-M.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="group relative inline-flex items-center px-8 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-medium rounded-lg overflow-hidden transition-all duration-300 hover:scale-105 shadow-xl shadow-purple-500/25"

@@ -194,9 +194,9 @@ const ServicesSection = () => {
         {/* Statistics Section */}
         <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
           {[
-            { number: "50+", label: "Projets réalisés", color: "purple" },
+            { number: "20+", label: "Projets réalisés", color: "purple" },
             { number: "98%", label: "Satisfaction client", color: "pink" },
-            { number: "3+", label: "Années d'expérience", color: "blue" },
+            { number: "2+", label: "Années d'expérience", color: "blue" },
           ].map((stat, index) => (
             <div key={index} className="group">
               <div

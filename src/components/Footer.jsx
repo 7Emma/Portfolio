@@ -71,7 +71,7 @@ function Footer() {
       id: "linkedin",
       label: "LinkedIn",
       icon: Linkedin,
-      url: "https://www.linkedin.com/in/emmanuel-mahoukp%C3%A9go-agbotoedo-50a6bb351",
+      url: "https://www.linkedin.com/in/mahoukpego",
       color: "hover:text-blue-400",
     },
     {

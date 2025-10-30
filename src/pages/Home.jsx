@@ -8,7 +8,7 @@ import {
   Palette,
   Zap,
 } from "lucide-react";
-import photo from "../assets/photo.png";
+import photo from "../assets/emmanuel-agbotoedo.png";
 
 const Home = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -152,7 +152,7 @@ const Home = () => {
               },
               {
                 icon: Linkedin,
-                href: "https://www.linkedin.com/in/emmanuel-mahoukp%C3%A9go-agbotoedo-50a6bb351/",
+                href: "https://www.linkedin.com/in/mahoukpego/",
                 label: "LinkedIn",
               },
               {
@@ -163,6 +163,7 @@ const Home = () => {
             ].map((social, index) => (
               <a
                 key={social.label}
+                target=""
                 href={social.href}
                 className={`group p-3 bg-slate-800/50 backdrop-blur-sm rounded-full border border-slate-700 hover:border-purple-400/50 transition-all duration-300 hover:scale-110 ${
                   isVisible
